@@ -1,0 +1,26 @@
+import { BrowserRouter, Routes, Route } from "react-router";
+import RouteTemplate from "./RouteTemplate";
+import RouterPaths from "./RouterPaths";
+import { HomePage } from "features/home/loadable";
+import { DesignPatternsPage } from "features/designPatterns/loadable";
+import { CreationalPage } from "features/designPatterns/features/creational/loadable";
+import { StructuralPage } from "features/designPatterns/features/structural/loadable";
+import { BehavioralPage } from "features/designPatterns/features/behavioral/loadable";
+
+const Router = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route element={<RouteTemplate />}>
+                    <Route path={RouterPaths.HOME} element={<HomePage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS} element={<DesignPatternsPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL} element={<CreationalPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL} element={<StructuralPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    )
+}
+
+export default Router;

@@ -9,6 +9,7 @@ export const siderMenuItems: SiderMenuItemType[] = [
         { label: 'About', key: RouterPaths.DESIGN_PATTERNS },
         { label: 'Creational', key: RouterPaths.DESIGN_PATTERNS_CREATIONAL, children: [
             { label: 'Factory Method', key: RouterPaths.DESIGN_PATTERNS_CREATIONAL_FACTORY_METHOD },
+            { label: 'Abstract Factory', key: RouterPaths.DESIGN_PATTERNS_CREATIONAL_ABSTRACT_FACTORY },
         ] },
         { label: 'Structural', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL },
         { label: 'Behavioral', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL },

@@ -6,10 +6,8 @@ export enum Profiles {
     SELLER = 'SELLER',
 }
 
-type ProfileType = keyof typeof Profiles;
-
 interface IExampleProfileFactory {
-    profile: ProfileType;
+    profile: Profiles;
 }
 
 /* 
@@ -25,8 +23,8 @@ const ProfileUnknown = () => <h4>unknown profile</h4>;
 Usando o tipo do usuario conseguimos criar o componente correto 
 aplicando o conceito de factory method
 */
-const profileFactory = (type: ProfileType) => {
-    const profilesType: Record<ProfileType, React.FC> = {
+const profileFactory = (type: Profiles) => {
+    const profilesType: Record<Profiles, React.FC> = {
         [Profiles.ADMIN]: () => <ProfileAdmin />,
         [Profiles.BUYER]: () => <ProfileBuyer />,
         [Profiles.SELLER]: () => <ProfileSeller />,

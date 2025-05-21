@@ -12,7 +12,7 @@ const FactoryMethod: React.FC = () => {
             <Col span={18}>
                 <Title id='part-1'>Factory Method em Programação Funcional</Title>
                 <Paragraph>
-                    O Factory Method, no contexto da programação funcional, é um padrão de criação de dados ou comportamentos que encapsula a lógica de construção de valores dentro de funções puras, permitindo flexibilidade e composição. Em vez de depender de herança e subclasses como na programação orientada a objetos, a abordagem funcional favorece a criação de funções que retornam diferentes variantes de dados ou comportamentos com base em parâmetros, promovendo a imutabilidade e evitando efeitos colaterais.
+                    É um padrão de criação de dados ou comportamentos que encapsula a lógica de construção de valores dentro de funções puras, permitindo flexibilidade e composição. Em vez de depender de herança e subclasses como na programação orientada a objetos, a abordagem funcional favorece a criação de funções que retornam diferentes variantes de dados ou comportamentos com base em parâmetros, promovendo a imutabilidade e evitando efeitos colaterais.
                 </Paragraph>
                 <Title level={3} id='part-2'>Características no paradigma funcional:</Title>
                 <ol className='list-disc ml-4'>
@@ -49,7 +49,7 @@ const FactoryMethod: React.FC = () => {
                 <Title level={4} className='mb-6 mt-6' id='part-6'>
                     Prós e contras
                 </Title>
-                <Row className='mt-6'>
+                <Row className='mt-6' gutter={16}>
                     <Col span={12}>
                         <Timeline
                             items={[
@@ -73,7 +73,7 @@ const FactoryMethod: React.FC = () => {
                             items={[
                                 {
                                     color: 'red',
-                                    children: ' O código pode se tornar mais complicado, pois você precisa introduzir muitas funções novas para implementar o padrão. O melhor cenário é quando você está introduzindo o padrão em uma hierarquia existente de funções criadoras',
+                                    children: 'O código pode se tornar mais complicado, pois você precisa introduzir muitas funções novas para implementar o padrão. O melhor cenário é quando você está introduzindo o padrão em uma hierarquia existente de funções criadoras',
                                 },
                             ]}
                         />
@@ -124,7 +124,7 @@ const FactoryMethod: React.FC = () => {
                         {
                             key: 'part-6',
                             href: '#part-6',
-                            title: 'Prós e contras',
+                            title: 'Prós e Contras',
                         },
                         {
                             key: 'part-7',

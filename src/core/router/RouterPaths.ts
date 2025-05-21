@@ -3,6 +3,7 @@ enum RouterPaths {
     DESIGN_PATTERNS = '/design-patterns',
     DESIGN_PATTERNS_CREATIONAL = '/design-patterns/creational',
     DESIGN_PATTERNS_CREATIONAL_FACTORY_METHOD = '/design-patterns/creational/factory-method',
+    DESIGN_PATTERNS_CREATIONAL_ABSTRACT_FACTORY = '/design-patterns/creational/abstract-factory',
     DESIGN_PATTERNS_STRUCTURAL = '/design-patterns/structural',
     DESIGN_PATTERNS_BEHAVIORAL = '/design-patterns/behavioral',
 }

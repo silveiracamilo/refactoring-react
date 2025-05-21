@@ -9,14 +9,4 @@
         box-sizing: border-box;
         scroll-behavior: smooth;
     }
-
-    /* For Firefox. */
-    * {
-        scrollbar-width: none;
-    }
-
-    /* For WebKit (Chrome & Safari). */
-    ::-webkit-scrollbar {
-        display: none;
-    }
 }

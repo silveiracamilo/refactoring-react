@@ -5,6 +5,13 @@ const theme: ThemeConfig = {
     token: {
         colorTextBase: '#FFFFFF',
         colorBgBase: '#000000',
+    },
+    components: {
+        Timeline: {
+            colorText: '#FFF',
+            dotBg: '#FFFFFF00',
+            tailColor: '#FFFFFF55'
+        }
     }
 }
 

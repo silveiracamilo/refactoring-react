@@ -11,24 +11,26 @@ interface ITemplate {
 }
 
 const Template: React.FC<ITemplate> = ({ children }) => {
-    const { token: { colorBgContainer, sizeXS } } = theme.useToken();
+    const { token: { colorBgContainer, sizeXXS } } = theme.useToken();
 
     return (
-        <Layout className="w-full h-screen">
-            <Header className="w-full">
+        <Layout className="size-full min-h-screen!">
+            <Header>
                 <HeaderContent />
             </Header>
             <Layout>
                 <Sider className={`bg-[${colorBgContainer}]!`}>
                     <SiderMenu />
                 </Sider>
-                <Content className={`size-full p-${sizeXS}`}>
-                    {children}
-                </Content>
+                <Layout style={{ overflow: 'initial' }}>
+                    <Content className={`p-${sizeXXS}`} >
+                        {children}
+                    </Content>
+                    <Footer className="align-middle text-center bg-gray-900!">
+                        Powered by &nbsp; <a href="https://silveiracamilo.com.br" target="_blank">silveiracamilo.com.br</a>
+                    </Footer>
+                </Layout>
             </Layout>
-            <Footer className="flex justify-center align-middle p-0! pt-2! bg-gray-900! h-[40px]!">
-                Powered by &nbsp; <a href="https://silveiracamilo.com.br" target="_blank">silveiracamilo.com.br</a>
-            </Footer>
         </Layout>
     );
 }

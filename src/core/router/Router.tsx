@@ -9,6 +9,7 @@ import { BehavioralPage } from "@/features/designPatterns/features/behavioral/lo
 import { FactoryMethodPage } from "@/features/designPatterns/features/creational/features/factoryMethod/loadable";
 import { AbstractFactoryPage } from "@/features/designPatterns/features/creational/features/abstractFactory/loadable";
 import { BuilderPage } from "@/features/designPatterns/features/creational/features/builder/loadable";
+import { PrototypePage } from "@/features/designPatterns/features/creational/features/prototype/loadable";
 
 const Router = () => {
     return (
@@ -21,6 +22,7 @@ const Router = () => {
                     <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL_FACTORY_METHOD} element={<FactoryMethodPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL_ABSTRACT_FACTORY} element={<AbstractFactoryPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL_BUILDER} element={<BuilderPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL_PROTOTYPE} element={<PrototypePage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL} element={<StructuralPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
                 </Route>

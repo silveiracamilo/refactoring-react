@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import RouteTemplate from "./RouteTemplate";
 import RouterPaths from "./RouterPaths";
-import { HomePage } from "features/home/loadable";
-import { DesignPatternsPage } from "features/designPatterns/loadable";
-import { CreationalPage } from "features/designPatterns/features/creational/loadable";
-import { StructuralPage } from "features/designPatterns/features/structural/loadable";
-import { BehavioralPage } from "features/designPatterns/features/behavioral/loadable";
-import { FactoryMethodPage } from "features/designPatterns/features/creational/features/factoryMethod/loadable";
-import { AbstractFactoryPage } from "features/designPatterns/features/creational/features/abstractFactory/loadable";
-import { BuilderPage } from "features/designPatterns/features/creational/features/builder/loadable";
+import { HomePage } from "@/features/home/loadable";
+import { DesignPatternsPage } from "@/features/designPatterns/loadable";
+import { CreationalPage } from "@/features/designPatterns/features/creational/loadable";
+import { StructuralPage } from "@/features/designPatterns/features/structural/loadable";
+import { BehavioralPage } from "@/features/designPatterns/features/behavioral/loadable";
+import { FactoryMethodPage } from "@/features/designPatterns/features/creational/features/factoryMethod/loadable";
+import { AbstractFactoryPage } from "@/features/designPatterns/features/creational/features/abstractFactory/loadable";
+import { BuilderPage } from "@/features/designPatterns/features/creational/features/builder/loadable";
 
 const Router = () => {
     return (

@@ -1,4 +1,4 @@
-import LanguageDropdown from "shared/components/languageDropdown/LanguageDropdown";
+import LanguageDropdown from "@/shared/components/languageDropdown/LanguageDropdown";
 
 const HeaderContent: React.FC = () => {
     return (

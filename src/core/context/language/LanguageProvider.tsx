@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useState, type ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Locales, type LocalesType, translations } from "shared/translation/i18n";
+import { Locales, type LocalesType, translations } from "@/shared/translation/i18n";
 
 interface ILanguageContext {
     locale: LocalesType

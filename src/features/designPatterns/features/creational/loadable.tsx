@@ -1,4 +1,4 @@
-import { lazyLoad } from 'shared/utils/loadable';
+import { lazyLoad } from '@/shared/utils/loadable';
 
 export const CreationalPage = lazyLoad(
   () => import('.'),

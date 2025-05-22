@@ -2,8 +2,8 @@ import { Dropdown, Space } from "antd";
 import { useIntl } from "react-intl";
 import messages from "./messages";
 import { useMemo } from "react";
-import { useLanguageContext } from "core/context/language/LanguageProvider";
-import { Locales } from "shared/translation/i18n";
+import { useLanguageContext } from "@/core/context/language/LanguageProvider";
+import { Locales } from "@/shared/translation/i18n";
 import type { ItemType } from "antd/es/menu/interface";
 
 const LanguageDropdown = () => {

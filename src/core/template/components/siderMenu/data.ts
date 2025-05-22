@@ -1,5 +1,5 @@
 import type { MenuProps } from "antd";
-import RouterPaths from "core/router/RouterPaths";
+import RouterPaths from "@/core/router/RouterPaths";
 
 type SiderMenuItemType = Required<MenuProps>['items'][number]
 

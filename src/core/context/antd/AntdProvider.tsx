@@ -1,9 +1,9 @@
 import { useLanguageContext } from "../language/LanguageProvider";
-import { Locales, type LocalesType } from "shared/translation/i18n";
+import { Locales, type LocalesType } from "@/shared/translation/i18n";
 import type { Locale } from "antd/es/locale";
 import { useMemo, type ReactElement } from "react";
 import { ConfigProvider } from "antd";
-import theme from "core/theme";
+import theme from "@/core/theme";
 import ptBR from "antd/lib/locale/pt_BR";
 import enUS from "antd/lib/locale/en_US";
 

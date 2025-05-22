@@ -1,5 +1,5 @@
 import React from 'react';
-import SyntaxHighlight from 'shared/components/syntaxHighlight/SyntaxHighlight';
+import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import ExampleProfileFactory, { Profiles } from './sample/ExampleProfileFactory';
 import { Anchor, Col, Row, Timeline, Typography } from 'antd';
 import { exampleProfileFactoryCode, exampleProfileFactoryRenderCode } from './sample/exampleProfileFactoryCode';

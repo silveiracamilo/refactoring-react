@@ -2,7 +2,7 @@ import { Menu, type MenuProps } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { siderMenuItems } from "./data";
-import RouterPaths from "core/router/RouterPaths";
+import RouterPaths from "@/core/router/RouterPaths";
 
 const SiderMenu = () => {
     const navigate = useNavigate();

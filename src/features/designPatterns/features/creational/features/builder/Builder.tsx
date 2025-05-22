@@ -1,5 +1,5 @@
 import React from 'react';
-import SyntaxHighlight from 'shared/components/syntaxHighlight/SyntaxHighlight';
+import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Anchor, Col, Row, Timeline, Typography } from 'antd';
 import { exampleMenuBuilderCode, exampleMenuBuilderRenderCode } from './sample/exampleMenuBuilderCode';
 import ExampleMenuBuilder from './sample/ExampleMenuBuilder';

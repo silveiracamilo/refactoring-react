@@ -25,42 +25,26 @@ const createCharacter = (): Character => ({
 /* 
   cria closure que retorna referencia ao objeto Builder, 
   criando uma cadeia de métodos até finalizar no método build, 
-  preservando a imutabilidade externa do objeto Character
+  preservando a imutabilidade do objeto Character
 */
-const characterBuilder = (): Builder => {
-  let character = createCharacter();
+const characterBuilder = (character: Character = createCharacter()): Builder => {
+  
+  //funções para atualização do objeto Character
+  const setName = (name: string) => characterBuilder({ ...character, name });
 
-  //função responsável por atualizar character
-  const characterUpdate = (key: string, value: string | string[]) => {
-    character = { ...character, [key]: value };
-  }
+  const setRace = (race: string) => characterBuilder({ ...character, race });
 
-  const setName = (name: string): Builder => {
-    characterUpdate('name', name);
-    return builder;
-  }
+  const setClass = (charClass: string) => characterBuilder({ ...character, class: charClass });
 
-  const setRace = (race: string): Builder => {
-    characterUpdate('race', race);
-    return builder;
-  }
+  const addSkill = (skill: string) => characterBuilder({ 
+    ...character, 
+    skills: [...character.skills, skill] 
+  });
 
-  const setClass = (charClass: string): Builder => {
-    characterUpdate('class', charClass);
-    return builder;
-  }
-
-  const addSkill = (skill: string): Builder => {
-    characterUpdate('skills', [...character.skills, skill]);
-    return builder;
-  }
-
-  //retorna o objeto character construido
+  //retorna o objeto character construído
   const build = () => character;
 
-  const builder = { setName, setRace, setClass, addSkill, build };
-
-  return builder;
+  return { setName, setRace, setClass, addSkill, build };
 }
 
 const ExampleCharacter: React.FC = () => {

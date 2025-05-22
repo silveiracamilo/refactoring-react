@@ -25,21 +25,14 @@ const LinkManagerUsers: React.FC = () => <a>gerenciar usuarios </a>;
 /**
   Aqui aplicamos o builder pattern
  */
-const menuBuild = (): Builder => {
-    const items: JSX.Element[] = [];
-
+const menuBuild = (items: JSX.Element[] = []): Builder => {
     // Adiciona partes ao menu de forma dinamica
-    const addItem = (component: JSX.Element) => {
-        items.push(component);
-        return builder;
-    };
+    const addItem = (component: JSX.Element) => menuBuild([...items, component]);
   
     // Funcao responsavel por criar nosso menu
     const build = () => <nav>{items}</nav>;
 
-    const builder = { addItem, build };
-
-    return builder;
+    return { addItem, build };
 };
 
 const Header: React.FC<HeaderProps> = ({ userType }): JSX.Element => {
@@ -53,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ userType }): JSX.Element => {
 
   // Nosso usuario admin tem acesso a um recurso exclusivo
   if (userType === UserType.ADMIN) {
-    menu.addItem(<LinkManagerUsers />);
+    menu = menu.addItem(<LinkManagerUsers />);
   }
 
   // aqui montamos o componente final que pode mudar baseado no perfil

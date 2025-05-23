@@ -2,6 +2,7 @@ import { Image, Layout, theme } from "antd";
 import type { ReactElement } from "react";
 import type React from "react";
 import SiderMenu from "./components/siderMenu/SiderMenu";
+import { useNavigate } from "react-router";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -10,7 +11,8 @@ type ITemplate = {
 }
 
 const Template: React.FC<ITemplate> = ({ children }) => {
-    const { token: { colorBgContainer, sizeXXS } } = theme.useToken();
+    const { token: { colorBgContainer } } = theme.useToken();
+    const navigate = useNavigate();
 
     return (
         <Layout className="size-full min-h-screen!">
@@ -18,12 +20,23 @@ const Template: React.FC<ITemplate> = ({ children }) => {
                 {/* <HeaderContent /> */}
             </Header>
             <Layout>
-                <Sider className={`bg-[${colorBgContainer}]!`}>
-                    <Image src="/images/logo.png" preview={false} />
+                <Sider 
+                    className={`bg-[${colorBgContainer}]!`}
+                    breakpoint="lg"
+                    collapsedWidth="0"
+                    zeroWidthTriggerStyle={{ top: 0 }}
+                >
+                    <Image 
+                        src="/images/logo.webp"
+                        alt="Refactoring React"
+                        preview={false}
+                        onClick={() => navigate('/')}
+                        className="cursor-pointer transition duration-300 ease-in-out hover:scale-115 hover:rotate-[-10deg]"
+                    />
                     <SiderMenu />
                 </Sider>
                 <Layout style={{ overflow: 'initial' }}>
-                    <Content className={`p-${sizeXXS}`} >
+                    <Content className={`pl-4 pt-12 lg:pt-4`} >
                         {children}
                     </Content>
                     <Footer className="align-middle text-center bg-gray-900!">

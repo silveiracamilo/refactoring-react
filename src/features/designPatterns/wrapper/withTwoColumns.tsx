@@ -4,10 +4,10 @@ import type { JSX } from "react";
 const withTwoColumns = (leftContent: JSX.Element, rightContent: JSX.Element) => {
     return (
         <Row>
-            <Col span={18}>
+            <Col lg={24} xl={18}>
                 {leftContent}
             </Col>
-            <Col span={6}>
+            <Col lg={0} xl={6}>
                 {rightContent}
             </Col>
         </Row>

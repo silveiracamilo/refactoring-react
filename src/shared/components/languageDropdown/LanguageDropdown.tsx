@@ -4,7 +4,7 @@ import messages from "./messages";
 import { useMemo } from "react";
 import { useLanguageContext } from "@/core/context/language/LanguageProvider";
 import { Locales } from "@/shared/translation/i18n";
-import type { ItemType } from "antd/es/menu/type";
+import type { ItemType } from "antd/lib/menu/interface";
 
 const LanguageDropdown = () => {
     const intl = useIntl();

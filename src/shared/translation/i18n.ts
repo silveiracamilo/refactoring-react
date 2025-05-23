@@ -6,7 +6,10 @@ export enum Locales {
     en = 'en',
 }
 
-export const translations: Record<Locales, Record<string, string>> = {
-    [Locales.pt]: ptMessages, 
-    [Locales.en]: enMessages, 
+export const translationFactory = (locale: Locales) => {
+    const translations: Record<Locales, Record<string, string>> = {
+        [Locales.pt]: ptMessages, 
+        [Locales.en]: enMessages, 
+    };
+    return translations[locale];
 }

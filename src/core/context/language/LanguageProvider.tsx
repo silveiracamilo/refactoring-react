@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo, useState, type ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Locales, translations } from "@/shared/translation/i18n";
+import { Locales, translationFactory } from "@/shared/translation/i18n";
 
 type ILanguageContext = {
     locale: Locales
@@ -20,13 +20,15 @@ export const useLanguageContext = () => {
 const LanguageProvider = ({ children }: { children: ReactElement }) => {
     const [locale, setLocale] = useState<Locales>(Locales.pt);
 
+    const messages = useMemo(() => translationFactory(locale), [locale]);
+
     const contextValue = useMemo(() => ({ locale, setLocale }), [locale]);
 
     return (
         <IntlProvider
             locale={locale}
             key={locale}
-            messages={translations[locale]}
+            messages={messages}
         >
             <LanguageContext value={contextValue}>
                 {children}

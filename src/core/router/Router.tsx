@@ -12,6 +12,7 @@ import { BuilderPage } from "@/features/designPatterns/features/creational/featu
 import { PrototypePage } from "@/features/designPatterns/features/creational/features/prototype/loadable";
 import { SingletonPage } from "@/features/designPatterns/features/creational/features/singleton/loadable";
 import { AdapterPage } from "@/features/designPatterns/features/structural/features/adapter/loadable";
+import { NoMatchPage } from "@/features/noMatch/loadable";
 
 const Router = () => {
     return (
@@ -29,6 +30,7 @@ const Router = () => {
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL} element={<StructuralPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_ADAPTER} element={<AdapterPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
+                    <Route path="*" element={<NoMatchPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

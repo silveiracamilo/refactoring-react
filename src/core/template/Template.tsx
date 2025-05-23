@@ -1,8 +1,7 @@
-import { Layout, theme } from "antd";
+import { Image, Layout, theme } from "antd";
 import type { ReactElement } from "react";
 import type React from "react";
 import SiderMenu from "./components/siderMenu/SiderMenu";
-import HeaderContent from "./components/header/Header";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -15,11 +14,12 @@ const Template: React.FC<ITemplate> = ({ children }) => {
 
     return (
         <Layout className="size-full min-h-screen!">
-            <Header>
-                <HeaderContent />
+            <Header className="bg-[url(/images/header_bg.svg)]! h-[50px]!">
+                {/* <HeaderContent /> */}
             </Header>
             <Layout>
                 <Sider className={`bg-[${colorBgContainer}]!`}>
+                    <Image src="/images/logo.png" preview={false} />
                     <SiderMenu />
                 </Sider>
                 <Layout style={{ overflow: 'initial' }}>

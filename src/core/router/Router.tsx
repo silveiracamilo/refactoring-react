@@ -11,6 +11,7 @@ import { AbstractFactoryPage } from "@/features/designPatterns/features/creation
 import { BuilderPage } from "@/features/designPatterns/features/creational/features/builder/loadable";
 import { PrototypePage } from "@/features/designPatterns/features/creational/features/prototype/loadable";
 import { SingletonPage } from "@/features/designPatterns/features/creational/features/singleton/loadable";
+import { AdapterPage } from "@/features/designPatterns/features/structural/features/adapter/loadable";
 
 const Router = () => {
     return (
@@ -26,6 +27,7 @@ const Router = () => {
                     <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL_PROTOTYPE} element={<PrototypePage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_CREATIONAL_SINGLETON} element={<SingletonPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL} element={<StructuralPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_ADAPTER} element={<AdapterPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
                 </Route>
             </Routes>

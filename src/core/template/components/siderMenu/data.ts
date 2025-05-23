@@ -14,7 +14,9 @@ export const siderMenuItems: SiderMenuItemType[] = [
             { label: 'Prototype', key: RouterPaths.DESIGN_PATTERNS_CREATIONAL_PROTOTYPE },
             { label: 'Singleton', key: RouterPaths.DESIGN_PATTERNS_CREATIONAL_SINGLETON },
         ] },
-        { label: 'Structural', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL },
+        { label: 'Structural', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL, children:[
+            { label: 'Adapter', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_ADAPTER },
+        ] },
         { label: 'Behavioral', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL },
     ] },
 ];

@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, type JSX } from "react";
 import LoadingSpin from "../components/loading/LoadingSpin";
 
-interface Opts {
+type Opts = {
   fallback: React.ReactNode;
 }
 type Unpromisify<T> = T extends Promise<infer P> ? P : never;

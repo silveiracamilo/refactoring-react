@@ -54,7 +54,7 @@ const Builder: React.FC = () => {
                 <Title level={3} id='part-5'>Conclusões:</Title>
                 <ol className='list-disc ml-4'>
                     <li>Simplicidade e Clareza, extremamente fácil de ler e entender</li>
-                    <li>Tem uma interface fluente (.setX().setY().addZ().build()), simples de entender e usar</li>
+                    <li>Tem uma type fluente (.setX().setY().addZ().build()), simples de entender e usar</li>
                     <li>Evita completamente classes, mantendo tudo em funções e objetos literais</li>
                     <li>Encapsulamento de estado garantido via closures. Garante imutabilidade externa (o estado não vaza)</li>
                     <li>Excelente abordagem para composição de UI em React. Equilibra bem clareza, produtividade e encapsulamento</li>
@@ -92,7 +92,7 @@ const Builder: React.FC = () => {
                                 },
                                 {
                                     color: 'red',
-                                    children: 'Sobrecarga de Código: requer escrever mais código boilerplate: interfaces, métodos setters e o método build. Às vezes é um exagero para objetos simples.',
+                                    children: 'Sobrecarga de Código: requer escrever mais código boilerplate: types, métodos setters e o método build. Às vezes é um exagero para objetos simples.',
                                 },
                                 {
                                     color: 'red',

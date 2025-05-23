@@ -6,9 +6,7 @@ export enum Locales {
     en = 'en',
 }
 
-export type LocalesType = keyof typeof Locales;
-
-export const translations: Record<LocalesType, Record<string, string>> = {
+export const translations: Record<Locales, Record<string, string>> = {
     [Locales.pt]: ptMessages, 
     [Locales.en]: enMessages, 
 }

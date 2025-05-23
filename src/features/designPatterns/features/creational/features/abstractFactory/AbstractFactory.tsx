@@ -64,7 +64,7 @@ const AbstractFactory: React.FC = () => {
                 <Title level={3} id='part-5'>Conclusões:</Title>
                 <ol className='list-disc ml-4'>
                     <li>Isolado a criação dos perfis em fábricas, deixando o componente ProfileUser desacoplado de qualquer implementação concreta</li>
-                    <li>As interfaces AbstractProfile e AbstractProfileFactory protegem contra implementações inválidas, oferecendo segurança de tipo e previsibilidade</li>
+                    <li>As types AbstractProfile e AbstractProfileFactory protegem contra implementações inválidas, oferecendo segurança de tipo e previsibilidade</li>
                     <li>Adicionar um novo perfil (ex.: GuestProfileFactory) é trivial e não exige alterar nenhum componente existente</li>
                     <li>O componente ProfileUser lida apenas com renderização, enquanto a lógica de configuração (estilo, tipo, navegação) está nas fábricas</li>
                     <li>Zero dependência de classes, uso de funções puras e composição funcional consistente.</li>
@@ -108,7 +108,7 @@ const AbstractFactory: React.FC = () => {
                             items={[
                                 {
                                     color: 'red',
-                                    children: 'O código pode tornar-se mais complicado do que deveria ser, uma vez que muitas novas interfaces e funções são introduzidas junto com o padrão',
+                                    children: 'O código pode tornar-se mais complicado do que deveria ser, uma vez que muitas novas types e funções são introduzidas junto com o padrão',
                                 },
                                 {
                                     color: 'red',

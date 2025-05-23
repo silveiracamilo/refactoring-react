@@ -1,6 +1,6 @@
 /*
   Caracteristicas compartilhas entre nossos componentes
-  criamos as interface abaixo para garantir que
+  criamos as type abaixo para garantir que
   nao vamos criar um componente invalido
 */
 enum Profiles {
@@ -9,7 +9,7 @@ enum Profiles {
     SELLER = 'SELLER',
 }
 
-interface AbstractProfile {
+type AbstractProfile = {
   style: string;
   type: Profiles;
   goToProfile: () => void;
@@ -17,11 +17,11 @@ interface AbstractProfile {
 
 type NavigateType = (url: string) => void;
 
-interface AbstractProfileFactory {
+type AbstractProfileFactory = {
   createProfile: () => AbstractProfile;
 }
 
-interface ProfileProps {
+type ProfileProps = {
   factory: AbstractProfileFactory;
 }
 
@@ -50,7 +50,7 @@ const createProfileFactory = (
   Nossas funcoes fabricas abaixo criam
   componentes que compartilhar caracteristicas
   e garantimos a correta implementacao atraves de 
-  interfaces.
+  types.
 */
 
 const AdminProfileFactory = (navigate: NavigateType) =>
@@ -67,7 +67,7 @@ const SellerProfileFactory = (navigate: NavigateType) =>
   Esse Componente tem a responsabilidade 
   de renderizar o comportamento padrao de qualquer
   componente que compartilhe o comportamento 
-  definido nas interfaces
+  definido nas types
 */
 const ProfileUser = (props: ProfileProps) => {
   const { factory } = props;
@@ -79,7 +79,7 @@ const ProfileUser = (props: ProfileProps) => {
   );
 }
 /*
-  Agora podemos carregar nossos perfils em qualquer contexto necessario. Seguindo as interfaces podemos 
+  Agora podemos carregar nossos perfils em qualquer contexto necessario. Seguindo as types podemos 
   ate criar novos perfis com seguranca que nao vamos quebrar o comportamento esperado.
   Reparem na injeção de dependência de navigate para a Factory, evitando efeito colateral direto no domínio, 
   poderia ser um navigate do useNavigate do react-router. Melhor injetar o comportamento, 

@@ -7,7 +7,7 @@ import './themes/github-dark.css';
 hljs.registerLanguage('typescript', typescript);
 hljs.registerLanguage('xml', xml);
 
-interface ISyntaxHighlight {
+type ISyntaxHighlight = {
     code: string
     language?: 'typescript' | 'xml' | undefined
 }

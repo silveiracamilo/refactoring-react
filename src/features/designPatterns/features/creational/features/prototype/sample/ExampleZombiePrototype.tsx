@@ -1,4 +1,4 @@
-interface Zombie {
+type Zombie = {
   type: string;
   health: number;
   damage: number;

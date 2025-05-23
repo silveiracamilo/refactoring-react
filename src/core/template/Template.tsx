@@ -6,7 +6,7 @@ import HeaderContent from "./components/header/Header";
 
 const { Header, Content, Footer, Sider } = Layout;
 
-interface ITemplate {
+type ITemplate = {
     children: ReactElement
 }
 

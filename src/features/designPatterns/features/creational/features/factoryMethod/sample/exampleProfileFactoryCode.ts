@@ -7,7 +7,7 @@ export enum Profiles {
     SELLER = 'SELLER',
 }
 
-interface IExampleProfileFactory {
+type IExampleProfileFactory = {
     profile: Profiles;
 }
 

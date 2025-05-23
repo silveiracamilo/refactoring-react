@@ -64,7 +64,7 @@ const Singleton: React.FC = () => {
                             <li>Evitar múltiplas inicializações de serviços externos</li>
                         </ol>
                     </li>
-                    <li>No entanto, é importante entender que o Singleton não participa do ciclo reativo do React. Seu estado interno não dispara re-renderizações automaticamente, o que significa que, se você quiser refletir mudanças desse Singleton na interface, será necessário usar estratégias adicionais, como hooks personalizados (useState, useEffect) ou gerenciadores de estado global (React Context, Zustand, Jotai, etc.)</li>
+                    <li>No entanto, é importante entender que o Singleton não participa do ciclo reativo do React. Seu estado interno não dispara re-renderizações automaticamente, o que significa que, se você quiser refletir mudanças desse Singleton na type, será necessário usar estratégias adicionais, como hooks personalizados (useState, useEffect) ou gerenciadores de estado global (React Context, Zustand, Jotai, etc.)</li>
                     <li>Portanto, o Singleton em React deve ser usado de forma consciente, para lidar com lógica de negócios, serviços externos e side effects, mas não deve substituir o controle de estado da UI, que deve permanecer dentro dos paradigmas reativos do React</li>
                 </ol>
                 <Title level={4} className='mb-6 mt-6' id='part-6'>

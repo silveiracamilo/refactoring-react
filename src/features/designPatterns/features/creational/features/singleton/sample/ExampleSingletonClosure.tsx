@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-interface Joke {
+type Joke = {
     icon_url: string;
     id: string;
     value: string;

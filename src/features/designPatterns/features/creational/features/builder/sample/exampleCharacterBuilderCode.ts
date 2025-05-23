@@ -1,12 +1,12 @@
 export const exampleCharacterBuilderCode = 
-`interface Character {
+`type Character = {
   name: string
   race: string
   class: string
   skills: string[]
 }
 
-interface Builder {
+type Builder = {
   setName: (name: string) => Builder
   setRace: (race: string) => Builder
   setClass: (charClass: string) => Builder

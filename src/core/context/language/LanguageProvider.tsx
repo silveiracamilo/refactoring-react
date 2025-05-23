@@ -1,10 +1,10 @@
 import { createContext, useContext, useMemo, useState, type ReactElement } from "react";
 import { IntlProvider } from "react-intl";
-import { Locales, type LocalesType, translations } from "@/shared/translation/i18n";
+import { Locales, translations } from "@/shared/translation/i18n";
 
-interface ILanguageContext {
-    locale: LocalesType
-    setLocale: React.Dispatch<React.SetStateAction<LocalesType>>
+type ILanguageContext = {
+    locale: Locales
+    setLocale: React.Dispatch<React.SetStateAction<Locales>>
 }
 
 const LanguageContext = createContext<ILanguageContext>({} as ILanguageContext);
@@ -18,7 +18,7 @@ export const useLanguageContext = () => {
 }
 
 const LanguageProvider = ({ children }: { children: ReactElement }) => {
-    const [locale, setLocale] = useState<LocalesType>(Locales.pt);
+    const [locale, setLocale] = useState<Locales>(Locales.pt);
 
     const contextValue = useMemo(() => ({ locale, setLocale }), [locale]);
 

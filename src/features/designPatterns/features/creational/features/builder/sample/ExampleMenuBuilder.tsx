@@ -4,11 +4,11 @@ enum UserType {
     ADMIN = "ADMIN",
     BUYER = "BUYER",
 }
-interface Builder {
+type Builder = {
     addItem: (component: JSX.Element) => Builder
     build: () => JSX.Element
 }
-interface HeaderProps {
+type HeaderProps = {
   userType: UserType;
 };
 

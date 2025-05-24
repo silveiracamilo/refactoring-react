@@ -42,25 +42,27 @@ export const orderApiAdapter = (apiOrder: ApiOrder): Order => ({
     })),
 });
 
+const getOrder = () => Promise.resolve({
+    order_id: '12345',
+    customer_info: {
+        fname: 'Alice',
+        lname: 'Johnson',
+        contact: {
+            email_address: 'alice@example.com'
+        }
+    },
+    items_list: [
+        { sku: 'ABC123', qty: 2, price_cents: 1000 },
+        { sku: 'XYZ456', qty: 1, price_cents: 5000 }
+    ],
+    status_code: 'SHIPPED'
+});
+
 export const useGetOrder = () => {
     return useQuery({ 
         queryKey: ['order'], 
         queryFn: async () => {
-            const apiResponse = await Promise.resolve({
-                order_id: '12345',
-                customer_info: {
-                    fname: 'Alice',
-                    lname: 'Johnson',
-                    contact: {
-                        email_address: 'alice@example.com'
-                    }
-                },
-                items_list: [
-                    { sku: 'ABC123', qty: 2, price_cents: 1000 },
-                    { sku: 'XYZ456', qty: 1, price_cents: 5000 }
-                ],
-                status_code: 'SHIPPED'
-            });
+            const apiResponse = await getOrder();
             return orderApiAdapter(apiResponse);
         }
     });

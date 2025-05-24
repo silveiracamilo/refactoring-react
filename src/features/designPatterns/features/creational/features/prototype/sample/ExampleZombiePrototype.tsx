@@ -43,7 +43,7 @@ const zombies: Zombie[] = [
 const ExampleZombiePrototype: React.FC = () => {
   return (
     <div style={{ padding: '20px' }}>
-      <h1>🧟‍♂️ Lista de Zumbis</h1>
+      <h1>Lista de Zumbis</h1>
       {zombies.map((zombie, index) => (
         <div
           key={index}
@@ -55,9 +55,9 @@ const ExampleZombiePrototype: React.FC = () => {
           }}
         >
           <h2>{zombie.type}</h2>
-          <p>❤️ Saúde: {zombie.health}</p>
-          <p>💥 Dano: {zombie.damage}</p>
-          <p>🗣️ Grito: {zombie.scream()}</p>
+          <p>Saúde: {zombie.health}</p>
+          <p>Dano: {zombie.damage}</p>
+          <p>Grito: {zombie.scream()}</p>
         </div>
       ))}
     </div>

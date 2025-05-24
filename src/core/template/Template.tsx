@@ -36,7 +36,7 @@ const Template: React.FC<ITemplate> = ({ children }) => {
                     <SiderMenu />
                 </Sider>
                 <Layout style={{ overflow: 'initial' }}>
-                    <Content className={`pl-4 pt-12 lg:pt-4`} >
+                    <Content className={`p-4 pt-12 lg:pt-4`} >
                         {children}
                     </Content>
                     <Footer className="align-middle text-center bg-gray-900!">

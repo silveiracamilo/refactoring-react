@@ -5,7 +5,7 @@ const NoMatch: React.FC = () => {
         <div className="min-h-full bg-[#0a1b2a] flex flex-col items-center justify-center text-white">
             <div className="text-center">
                 <h1 className="text-9xl font-extrabold tracking-widest">404</h1>
-                <div className="bg-[#00ffcc] px-2 text-sm rounded rotate-12 absolute">
+                <div className="bg-sky-500 px-2 text-sm rounded rotate-12 absolute">
                 Página não encontrada
                 </div>
                 <p className="mt-6 text-lg">

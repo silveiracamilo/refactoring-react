@@ -9,6 +9,7 @@ enum RouterPaths {
     DESIGN_PATTERNS_CREATIONAL_SINGLETON = '/design-patterns/creational/singleton',
     DESIGN_PATTERNS_STRUCTURAL = '/design-patterns/structural',
     DESIGN_PATTERNS_STRUCTURAL_ADAPTER = '/design-patterns/structural/adapter',
+    DESIGN_PATTERNS_STRUCTURAL_BRIDGE = '/design-patterns/structural/bridge',
     DESIGN_PATTERNS_BEHAVIORAL = '/design-patterns/behavioral',
 }
 

@@ -16,7 +16,7 @@ const Template: React.FC<ITemplate> = ({ children }) => {
 
     return (
         <Layout className="size-full min-h-screen!">
-            <Header className="bg-[url(/images/header_bg.svg)]! h-[50px]!">
+            <Header className="bg-[url(/images/header_bg.svg)]! bg-right! h-[50px]!">
                 {/* <HeaderContent /> */}
             </Header>
             <Layout>

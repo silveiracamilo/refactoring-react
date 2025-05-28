@@ -15,6 +15,7 @@ import { AdapterPage } from "@/features/designPatterns/features/structural/featu
 import { NoMatchPage } from "@/features/noMatch/loadable";
 import { BridgePage } from "@/features/designPatterns/features/structural/features/bridge/loadable";
 import { CompositePage } from "@/features/designPatterns/features/structural/features/composite/loadable";
+import { DecoratorPage } from "@/features/designPatterns/features/structural/features/decorator/loadable";
 
 const Router = () => {
     return (
@@ -33,6 +34,7 @@ const Router = () => {
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_ADAPTER} element={<AdapterPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_BRIDGE} element={<BridgePage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_COMPOSITE} element={<CompositePage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_DECORATOR} element={<DecoratorPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
                     <Route path="*" element={<NoMatchPage />} />
                 </Route>

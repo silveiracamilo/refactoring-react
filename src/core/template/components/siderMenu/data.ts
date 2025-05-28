@@ -18,6 +18,7 @@ export const siderMenuItems: SiderMenuItemType[] = [
             { label: 'Bridge', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_BRIDGE },
             { label: 'Composite', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_COMPOSITE },
             { label: 'Decorator', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_DECORATOR },
+            { label: 'Facade', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FACADE },
         ] },
         { label: 'Behavioral', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL },
     ] },

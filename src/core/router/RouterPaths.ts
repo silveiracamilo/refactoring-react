@@ -12,6 +12,7 @@ enum RouterPaths {
     DESIGN_PATTERNS_STRUCTURAL_BRIDGE = '/design-patterns/structural/bridge',
     DESIGN_PATTERNS_STRUCTURAL_COMPOSITE = '/design-patterns/structural/composite',
     DESIGN_PATTERNS_STRUCTURAL_DECORATOR = '/design-patterns/structural/decorator',
+    DESIGN_PATTERNS_STRUCTURAL_FACADE = '/design-patterns/structural/facade',
     DESIGN_PATTERNS_BEHAVIORAL = '/design-patterns/behavioral',
 }
 

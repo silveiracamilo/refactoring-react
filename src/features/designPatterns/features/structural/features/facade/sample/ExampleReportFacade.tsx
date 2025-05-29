@@ -50,14 +50,14 @@ const UserReportFacade = {
 const ExampleReportFacade = () => {
     const { data: users, isLoading } = useGetUsers();
 
+    const doExportUsers = useCallback(() => {
+        //verificando se users é válido chamando Facade para gerar relatório
+        users && UserReportFacade.generatePdf(users);
+    }, [users]);
+
     if (isLoading || !users) {
         return <p>loading...</p>
     }
-
-    const doExportUsers = useCallback(() => {
-        //chamando Facade para gerar relatório
-        UserReportFacade.generatePdf(users);
-    }, [users]);
 
     return (
         <Button onClick={doExportUsers}>Exportar relatório de usuários</Button>

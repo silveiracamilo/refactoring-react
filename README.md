@@ -1,3 +1,13 @@
+# Bem-vindo ao Refactoring React
+
+#### Refactoring React é um espaço criado para quem busca escrever código mais limpo, sustentável e de alta qualidade utilizando React com paradigmas funcionais. Aqui você vai aprender, de forma clara, visual e didática, como aplicar na prática conceitos fundamentais como Design Patterns, SOLID, Clean Code e diversas boas práticas de desenvolvimento frontend
+
+Nos inspiramos profundamente no trabalho incrível realizado pelo site [Refactoring Guru](https://refactoring.guru/), que tornou o aprendizado sobre padrões de projeto algo acessível, didático e prazeroso. Este projeto não existiria sem essa referência de excelência.
+
+O projeto segue em construção, mas podem ir acompanhando por ai ;)
+
+[Refactoring React](https://refactoring-react.silveiracamilo.com.br/)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

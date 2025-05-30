@@ -1,3 +1,6 @@
+import { Button } from "antd";
+import { useMemo } from "react";
+
 /*
   Caracteristicas compartilhas entre nossos componentes
   criamos as type abaixo para garantir que
@@ -69,12 +72,15 @@ const SellerProfileFactory = (navigate: NavigateType) =>
   componente que compartilhe o comportamento 
   definido nas types
 */
-const ProfileUser = (props: ProfileProps) => {
-  const { factory } = props;
-  const { style, type, goToProfile } = factory.createProfile();
+const ProfileUser: React.FC<ProfileProps> = ({ factory }) => {
+  const { style, type, goToProfile } = useMemo(
+    () => factory.createProfile(), 
+    [factory]
+  );
+  
   return (
     <div className={style}>
-      <button onClick={() => goToProfile()}>{type}</button>
+      <Button onClick={() => goToProfile()}>{type}</Button>
     </div>
   );
 }

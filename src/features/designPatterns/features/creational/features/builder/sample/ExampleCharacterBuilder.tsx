@@ -1,3 +1,5 @@
+import { useMemo } from "react"
+
 type Character = {
   name: string
   race: string
@@ -47,14 +49,16 @@ const characterBuilder = (character: Character = createCharacter()): Builder => 
 }
 
 const ExampleCharacter: React.FC = () => {
-  const character = characterBuilder()
-                    .setName('Camilo')
-                    .setClass('Gold')
-                    .setRace('Speeding')
-                    .addSkill('force')
-                    .addSkill('agility')
-                    .addSkill('resilience')
-                    .build();
+  const character = useMemo(() => {
+      return characterBuilder()
+            .setName('Camilo')
+            .setClass('Gold')
+            .setRace('Speeding')
+            .addSkill('force')
+            .addSkill('agility')
+            .addSkill('resilience')
+            .build();
+  }, []);
   const { name, race, class: charClass, skills } = character;
 
   return (

@@ -2,9 +2,9 @@ export const exampleProfileFactoryCode =
 `import { useMemo } from "react";
 
 export enum Profiles {
-    ADMIN = 'ADMIN',
-    BUYER = 'BUYER',
-    SELLER = 'SELLER',
+    ADMIN,
+    BUYER,
+    SELLER,
 }
 
 type IExampleProfileFactory = {

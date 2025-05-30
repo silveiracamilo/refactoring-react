@@ -1,9 +1,9 @@
 export const exampleMenuBuilderCode = 
-`import type { JSX } from "react";
+`import { useMemo, type JSX } from "react";
 
 enum UserType {
-    ADMIN = "ADMIN",
-    BUYER = "BUYER",
+    ADMIN,
+    BUYER,
 }
 type Builder = {
     addItem: (component: JSX.Element) => Builder
@@ -36,21 +36,26 @@ const menuBuild = (items: JSX.Element[] = []): Builder => {
 };
 
 const Header: React.FC<HeaderProps> = ({ userType }): JSX.Element => {
-  /**
-   Adicionando componentes padroes no menu
-   esses podem ser acessos por qualquer perfil de usuario
- */
-  let menu = menuBuild()
-                .addItem(<LinkMyProducts />)
-                .addItem(<LinkMyWishList />);
+  
+  const menuBuilded = useMemo(() => {
+    /**
+     Adicionando componentes padroes no menu
+    esses podem ser acessos por qualquer perfil de usuario
+    */
+    let menu = menuBuild()
+                  .addItem(<LinkMyProducts key="products" />)
+                  .addItem(<LinkMyWishList key="wishlist" />);
 
-  // Nosso usuario admin tem acesso a um recurso exclusivo
-  if (userType === UserType.ADMIN) {
-    menu = menu.addItem(<LinkManagerUsers />);
-  }
+    // Nosso usuario admin tem acesso a um recurso exclusivo
+    if (userType === UserType.ADMIN) {
+      menu = menu.addItem(<LinkManagerUsers key="manager-users" />);
+    }
 
-  // aqui montamos o componente final que pode mudar baseado no perfil
-  return menu.build();
+    // aqui montamos o componente final que pode mudar baseado no perfil
+    return menu.build();
+  }, [userType]);
+  
+  return menuBuilded;
 }
 
 const ExampleMenuBuilder:React.FC = () => {

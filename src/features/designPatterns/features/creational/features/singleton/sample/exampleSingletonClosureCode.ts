@@ -1,5 +1,6 @@
 export const exampleSingletonClosureCode = 
 `import { useQuery } from "@tanstack/react-query";
+import { useCallback } from "react";
 
 type Joke = {
     icon_url: string;
@@ -72,12 +73,12 @@ const ChunkJoke: React.FC = () => {
 }
 
 const ExampleSingletonClosure: React.FC = () => {
-    const alertCountJokes = () => {
+    const alertCountJokes = useCallback(() => {
         alert("Counts: " + apiChunkNorris.getCountJokesCall() +
                ", " + apiChunkNorris.getInstance());
-    }
+    }, []);
 
-    const callGetJokesRandom = () => apiChunkNorris.getJokesRandom();
+    const callGetJokesRandom = useCallback(() => apiChunkNorris.getJokesRandom(), []);
 
     return (
         <div className="p-2">

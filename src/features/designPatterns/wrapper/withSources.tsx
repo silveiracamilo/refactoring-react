@@ -1,12 +1,17 @@
 import { Typography } from "antd";
-import type { JSX } from "react";
+import type { ReactNode } from "react";
 
 const { Title } = Typography;
 
-const withSources = (content: JSX.Element, sources: JSX.Element[]) => {
+type SourcesSectionProps = {
+    sources: ReactNode[]
+    children: ReactNode
+}
+
+const SourcesSection = ({ children, sources }: SourcesSectionProps) => {
     return (
         <>
-        {content}
+        {children}
         <Title level={3} id='part-7'>Fontes:</Title>
         <ol className='list-disc ml-4'>
             {sources}
@@ -15,4 +20,4 @@ const withSources = (content: JSX.Element, sources: JSX.Element[]) => {
     );
 }
 
-export default withSources;
+export default SourcesSection;

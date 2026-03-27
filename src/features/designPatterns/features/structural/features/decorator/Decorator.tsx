@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { exampleHOCDecoratorCode, exampleHOCDecoratorRenderCode } from './sample/exampleHOCDecoratorCode';
@@ -6,7 +5,7 @@ import ExampleHOCDecotar from './sample/ExampleHOCDecotar';
 
 const { Title, Paragraph } = Typography;
 
-const Decorator: React.FC = () => {
+const Decorator = () => {
     return (
         <>
         <Title id='part-1'>Decorator em Programação Funcional</Title>

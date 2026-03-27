@@ -1,7 +1,6 @@
-import React from "react";
 import Structural from "./Structural";
 
-export const StructuralPage: React.FC = () => {
+export const StructuralPage = () => {
     return (
         <Structural />
     );

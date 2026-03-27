@@ -1,6 +1,6 @@
 import { Spin } from "antd";
 
-const LoadingSpin: React.FC = () => {
+const LoadingSpin = () => {
   return (
     <div className="flex size-full justify-center items-center">
       <Spin spinning />

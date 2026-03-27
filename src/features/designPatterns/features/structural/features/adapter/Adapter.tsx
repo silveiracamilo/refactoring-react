@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { ExampleOrderAdapter } from './sample/ExampleOrderAdapter';
@@ -6,7 +5,7 @@ import { exampleOrderAdapterCode, exampleOrderAdapterRenderCode } from './sample
 
 const { Title, Paragraph } = Typography;
 
-const Adapter: React.FC = () => {
+const Adapter = () => {
     return (
         <>
         <Title id='part-1'>Adapter em Programação Funcional</Title>

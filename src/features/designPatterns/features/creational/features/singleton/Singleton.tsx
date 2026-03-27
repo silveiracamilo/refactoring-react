@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import ExampleSingletonClass from './sample/ExampleSingletonClass';
@@ -8,7 +7,7 @@ import { exampleSingletonClosureCode, exampleSingletonClosureRenderCode } from '
 
 const { Title, Paragraph } = Typography;
 
-const Singleton: React.FC = () => {
+const Singleton = () => {
     return (
         <>
         <Title id='part-1'>Singleton em Programação Funcional</Title>

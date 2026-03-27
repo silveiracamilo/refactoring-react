@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Creational: React.FC = () => {
+const Creational = () => {
     return (
         <>
             <h1>Creational</h1>

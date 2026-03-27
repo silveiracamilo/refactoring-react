@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Behavioral: React.FC = () => {
+const Behavioral = () => {
     return (
         <>
             <h1>Behavioral Patterns</h1>

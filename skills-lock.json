@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "commit": {
+      "source": "getsentry/skills",
+      "sourceType": "github",
+      "computedHash": "e5759d236999821ebd4e77a398f1cbd6246683a88f7888f5112f5f6a08b73a93"
+    },
+    "git-commit": {
+      "source": "github/awesome-copilot",
+      "sourceType": "github",
+      "computedHash": "2607fc60629b82b257136dd2a7a373f0a4466c0b49df7746d845d59313c99b21"
+    }
+  }
+}

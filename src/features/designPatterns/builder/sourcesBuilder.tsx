@@ -1,4 +1,3 @@
-import { map } from "lodash";
 import type { JSX } from "react";
 
 export type ISource = {
@@ -15,9 +14,9 @@ export const sourceFactory = (url: string): ISource => ({ url });
 export const sourcesBuilder = (sources: ISource[] = []): ISourcesBuilder => {
     const addSource = (url: string) => sourcesBuilder([...sources, sourceFactory(url)]);
     
-    const build = () => map(sources, ({ url }, i) => (
-        <li key={`source-${i}`}>
-            <a href={url} target='_blank'>{url}</a>
+    const build = () => sources.map(({ url }) => (
+        <li key={url}>
+            <a href={url} target='_blank' rel='noopener noreferrer'>{url}</a>
         </li>
     ));
 

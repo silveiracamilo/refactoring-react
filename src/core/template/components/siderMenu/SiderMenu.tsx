@@ -1,21 +1,16 @@
 import { Menu, type MenuProps } from "antd";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback } from "react";
 import { useLocation, useNavigate } from "react-router";
 import { siderMenuItems } from "./data";
-import RouterPaths from "@/core/router/RouterPaths";
 
 const SiderMenu = () => {
     const navigate = useNavigate();
     const { pathname } = useLocation();
-    const [selectedKeys, setSelectedKeys] = useState<string[]>([RouterPaths.HOME]);
+    const selectedKeys = [pathname];
 
-    useEffect(() => {
-        setSelectedKeys([pathname]);
-    }, [pathname]);
-
-    const onClickMenu: MenuProps['onClick'] = useCallback((e: any) => {
+    const onClickMenu = useCallback<NonNullable<MenuProps['onClick']>>((e) => {
         navigate(e.key);
-    }, []);
+    }, [navigate]);
 
     return (
         <Menu

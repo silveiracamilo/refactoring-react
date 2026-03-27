@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { exampleProfileAbstractFactoryCode, exampleProfileAbstractFactoryRenderCode } from './sample/exampleProfileAbstractFactoryCode';
@@ -35,7 +34,7 @@ const decisao = `
           └──────────────────────────────────────────────────────────────┘
 `;
 
-const AbstractFactory: React.FC = () => {
+const AbstractFactory = () => {
     return (
         <>
         <Title id='part-1'>Abstract Factory em Programação Funcional</Title>

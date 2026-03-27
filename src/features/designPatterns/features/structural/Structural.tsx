@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Structural: React.FC = () => {
+const Structural = () => {
     return (
         <>
             <h1>Structural</h1>

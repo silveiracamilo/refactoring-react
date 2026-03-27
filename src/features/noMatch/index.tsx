@@ -1,7 +1,6 @@
-import React from "react";
 import NoMatch from "./NoMatch";
 
-export const NoMatchPage: React.FC = () => {
+export const NoMatchPage = () => {
     return (
         <NoMatch />
     );

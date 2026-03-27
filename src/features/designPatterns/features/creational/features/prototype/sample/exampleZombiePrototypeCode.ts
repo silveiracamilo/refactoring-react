@@ -41,13 +41,13 @@ const zombies: Zombie[] = [
 ];
 
 // Componente que exibe a lista de zumbis
-const ExampleZombiePrototype: React.FC = () => {
+const ExampleZombiePrototype = () => {
   return (
     <div style={{ padding: '20px' }}>
       <h1>Lista de Zumbis</h1>
       {zombies.map((zombie, index) => (
         <div
-          key={index}
+          key={\`zombie-\${zombie.type}-\${index}\`}
           style={{
             border: '1px solid #ccc',
             padding: '10px',

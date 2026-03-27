@@ -1,7 +1,6 @@
-import React from 'react';
 import { useIntl } from 'react-intl';
 
-const DesignPatterns: React.FC = () => {
+const DesignPatterns = () => {
     const intl = useIntl();
 
     return (

@@ -1,6 +1,5 @@
 import { Image, Layout, theme } from "antd";
 import type { ReactElement } from "react";
-import type React from "react";
 import SiderMenu from "./components/siderMenu/SiderMenu";
 import { useNavigate } from "react-router";
 
@@ -10,7 +9,7 @@ type ITemplate = {
     children: ReactElement
 }
 
-const Template: React.FC<ITemplate> = ({ children }) => {
+const Template = ({ children }: ITemplate) => {
     const { token: { colorBgContainer } } = theme.useToken();
     const navigate = useNavigate();
 
@@ -40,7 +39,7 @@ const Template: React.FC<ITemplate> = ({ children }) => {
                         {children}
                     </Content>
                     <Footer className="align-middle text-center bg-gray-900!">
-                        Powered by &nbsp; <a href="https://silveiracamilo.com.br" target="_blank">silveiracamilo.com.br</a>
+                        Powered by &nbsp; <a href="https://silveiracamilo.com.br" target="_blank" rel="noopener noreferrer">silveiracamilo.com.br</a>
                     </Footer>
                 </Layout>
             </Layout>

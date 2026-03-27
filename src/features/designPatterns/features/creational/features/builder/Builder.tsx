@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { exampleMenuBuilderCode, exampleMenuBuilderRenderCode } from './sample/exampleMenuBuilderCode';
@@ -8,7 +7,7 @@ import { exampleCharacterBuilderCode, exampleCharacterBuilderRenderCode } from '
 
 const { Title, Paragraph } = Typography;
 
-const Builder: React.FC = () => {
+const Builder = () => {
     return (
         <>
         <Title id='part-1'>Builder em Programação Funcional</Title>

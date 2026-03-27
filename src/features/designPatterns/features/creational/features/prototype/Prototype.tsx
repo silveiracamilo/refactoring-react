@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { exampleZombiePrototypeCode, exampleZombiePrototypeRenderCode } from './sample/exampleZombiePrototypeCode';
@@ -6,7 +5,7 @@ import ExampleZombiePrototype from './sample/ExampleZombiePrototype';
 
 const { Title, Paragraph } = Typography;
 
-const Prototype: React.FC = () => {
+const Prototype = () => {
     return (
         <>
         <Title id='part-1'>Prototype em Programação Funcional</Title>

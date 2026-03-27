@@ -1,19 +1,18 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import AbstractFactory from "./AbstractFactory";
 import { anchorsBuild } from "./build/anchorsBuild";
 import { sourcesBuild } from "./build/sourcesBuild";
 import { prosConsBuild } from "./build/prosConsBuild";
-import withTemplateDesignPatterns from "@/features/designPatterns/wrapper/withTemplateDesignPatterns";
+import TemplateDesignPatterns from "@/features/designPatterns/wrapper/withTemplateDesignPatterns";
 
-export const AbstractFactoryPage: React.FC = () => {
+export const AbstractFactoryPage = () => {
     const anchors = useMemo(anchorsBuild, []);
     const sources = useMemo(sourcesBuild, []);
-    const prosCons = useMemo(prosConsBuild, []);;
+    const prosCons = useMemo(prosConsBuild, []);
 
-    return withTemplateDesignPatterns(
-        <AbstractFactory />,
-        prosCons,
-        sources, 
-        anchors
+    return (
+        <TemplateDesignPatterns prosCons={prosCons} sources={sources} anchors={anchors}>
+            <AbstractFactory />
+        </TemplateDesignPatterns>
     );
 }

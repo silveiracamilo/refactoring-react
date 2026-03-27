@@ -52,7 +52,11 @@ const ExampleReportFacade = () => {
 
     const doExportUsers = useCallback(() => {
         //verificando se users é válido e chamando Facade para gerar relatório
-        users && UserReportFacade.generatePdf(users);
+        if (!users) {
+            return;
+        }
+
+        UserReportFacade.generatePdf(users);
     }, [users]);
 
     if (isLoading || !users) {

@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import ExampleProfileFactory, { Profiles } from './sample/ExampleProfileFactory';
 import { Typography } from 'antd';
@@ -6,7 +5,7 @@ import { exampleProfileFactoryCode, exampleProfileFactoryRenderCode } from './sa
 
 const { Title, Paragraph } = Typography;
 
-const FactoryMethod: React.FC = () => {
+const FactoryMethod = () => {
     return (
         <>
         <Title id='part-1'>Factory Method em Programação Funcional</Title>

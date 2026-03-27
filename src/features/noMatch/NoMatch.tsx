@@ -1,6 +1,4 @@
-import React from 'react';
-
-const NoMatch: React.FC = () => {
+const NoMatch = () => {
     return (
         <div className="min-h-full bg-[#0a1b2a] flex flex-col items-center justify-center text-white">
             <div className="text-center">

@@ -3,6 +3,7 @@ import LanguageProvider from "./context/language/LanguageProvider";
 import AntdProvider from "./context/antd/AntdProvider";
 import Router from "./router/Router"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ErrorBoundary from "@/shared/components/errorBoundary/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
@@ -11,7 +12,9 @@ const App = () => {
     <LanguageProvider>
       <AntdProvider>
         <QueryClientProvider client={queryClient}>
-          <Router />
+          <ErrorBoundary>
+            <Router />
+          </ErrorBoundary>
         </QueryClientProvider>
       </AntdProvider>
     </LanguageProvider>

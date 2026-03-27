@@ -1,5 +1,3 @@
-import { map } from "lodash";
-
 type IAnchorInput = {
     key: string
     title: string
@@ -25,7 +23,7 @@ export const anchorsBuilder = (anchors: IAnchorInput[] = []): IAnchorsBuilder =>
         anchorFactory(key, title)
     ]);
     
-    const build = (): IAnchor[] => map(anchors, ({ key, title }) => ({
+    const build = (): IAnchor[] => anchors.map(({ key, title }) => ({
         key,
         href: `#${key}`,
         title,

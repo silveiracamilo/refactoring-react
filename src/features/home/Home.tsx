@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Home: React.FC = () => {
+const Home = () => {
     return (
         <section className="w-full bg-gradient-to-b from-slate-950 to-slate-900 text-white py-20 px-6">
             <div className="max-w-5xl mx-auto">

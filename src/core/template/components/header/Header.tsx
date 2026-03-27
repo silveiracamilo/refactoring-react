@@ -1,6 +1,6 @@
 import LanguageDropdown from "@/shared/components/languageDropdown/LanguageDropdown";
 
-const HeaderContent: React.FC = () => {
+const HeaderContent = () => {
     return (
         <div className="flex justify-between">
             <div>React - Design Patterns and Solid</div>

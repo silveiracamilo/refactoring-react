@@ -1,8 +1,12 @@
 import { Outlet } from "react-router";
-import withTemplate from "../template/wrapper/withTemplate";
+import Template from "../template/Template";
 
-const RouteTemplate: React.FC = () => {
-    return withTemplate(<Outlet />);
+const RouteTemplate = () => {
+    return (
+        <Template>
+            <Outlet />
+        </Template>
+    );
 }
 
 export default RouteTemplate;

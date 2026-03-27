@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import ExampleReportFacade from './sample/ExampleReportFacade';
@@ -6,7 +5,7 @@ import { exampleReportFacadeCode, exampleReportFacadeRenderCode } from './sample
 
 const { Title, Paragraph } = Typography;
 
-const Facade: React.FC = () => {
+const Facade = () => {
     return (
         <>
         <Title id='part-1'>Facade em Programação Funcional</Title>

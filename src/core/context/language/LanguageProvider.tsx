@@ -7,7 +7,7 @@ type ILanguageContext = {
     setLocale: React.Dispatch<React.SetStateAction<Locales>>
 }
 
-const LanguageContext = createContext<ILanguageContext>({} as ILanguageContext);
+const LanguageContext = createContext<ILanguageContext | null>(null);
 
 export const useLanguageContext = () => {
     const context = useContext(LanguageContext);

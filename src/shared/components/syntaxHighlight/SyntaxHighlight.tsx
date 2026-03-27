@@ -12,7 +12,7 @@ type ISyntaxHighlight = {
     language?: 'typescript' | 'xml' | undefined
 }
 
-const SyntaxHighlight: React.FC<ISyntaxHighlight> = ({ code, language }) => {
+const SyntaxHighlight = ({ code, language }: ISyntaxHighlight) => {
     const codeHtml = useMemo(
         () => {
             if (language) {

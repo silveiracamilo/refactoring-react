@@ -20,7 +20,7 @@ const LanguageDropdown = () => {
             label: 'Português',
             onClick: () => setLocale(Locales.pt),
         },
-    ], []);
+    ], [setLocale]);
 
     return (
         <Dropdown menu={{ items }}>

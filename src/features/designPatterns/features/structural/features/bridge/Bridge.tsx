@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { exampleMediaBridgeCode, exampleMediaBridgeRenderCode } from './sample/exampleMediaBridgeCode';
@@ -6,7 +5,7 @@ import ExampleMediaBridge from './sample/ExampleMediaBridge';
 
 const { Title, Paragraph } = Typography;
 
-const Bridge: React.FC = () => {
+const Bridge = () => {
     return (
         <>
         <Title id='part-1'>Bridge em Programação Funcional</Title>

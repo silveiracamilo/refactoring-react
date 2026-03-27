@@ -1,7 +1,6 @@
-import React from "react";
 import Creational from "./Creational";
 
-export const CreationalPage: React.FC = () => {
+export const CreationalPage = () => {
     return (
         <Creational />
     );

@@ -4,28 +4,36 @@ import LoadingSpin from "../components/loading/LoadingSpin";
 type Opts = {
   fallback: React.ReactNode;
 }
-type Unpromisify<T> = T extends Promise<infer P> ? P : never;
 
-export const lazyLoad = <
-  T extends Promise<any>,
-  U extends React.ComponentType<any>
->(
-  importFunc: () => T,
-  selectorFunc?: (s: Unpromisify<T>) => U,
+type ModuleWithDefault<TProps extends object> = {
+  default: React.ComponentType<TProps>;
+};
+
+export const lazyLoad = <TProps extends object, TModule = unknown>(
+  importFunc: () => Promise<ModuleWithDefault<TProps> | TModule>,
+  selectorOrOpts?: ((module: TModule) => React.ComponentType<TProps>) | Opts,
   opts: Opts = { fallback: <LoadingSpin /> }
 ) => {
-  let lazyFactory: () => Promise<{ default: U }> = importFunc;
+  const selector =
+    typeof selectorOrOpts === "function" ? selectorOrOpts : undefined;
+  const resolvedOpts: Opts = selector
+    ? opts
+    : (selectorOrOpts ?? opts) as Opts;
 
-  if (selectorFunc) {
-    lazyFactory = () =>
-      importFunc().then((module) => ({ default: selectorFunc(module) }));
-  }
+  const lazyFactory = () =>
+    importFunc().then((module) => {
+      if (selector) {
+        return { default: selector(module as TModule) };
+      }
+
+      return module as ModuleWithDefault<TProps>;
+    });
 
   const LazyComponent = lazy(lazyFactory);
 
-  return (props: React.ComponentProps<U>): JSX.Element => (
-    <Suspense fallback={opts.fallback!}>
-      <LazyComponent {...props} />
+  return (props: TProps): JSX.Element => (
+    <Suspense fallback={resolvedOpts.fallback}>
+      {React.createElement(LazyComponent, props)}
     </Suspense>
   );
 };

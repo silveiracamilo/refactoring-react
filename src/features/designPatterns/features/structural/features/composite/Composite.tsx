@@ -1,4 +1,3 @@
-import React from 'react';
 import SyntaxHighlight from '@/shared/components/syntaxHighlight/SyntaxHighlight';
 import { Typography } from 'antd';
 import { exampleCompositeCode, exampleCompositeRenderCode } from './sample/exampleCompositeCode';
@@ -6,7 +5,7 @@ import { ExampleComposite } from './sample/ExampleComposite';
 
 const { Title, Paragraph } = Typography;
 
-const Composite: React.FC = () => {
+const Composite = () => {
     return (
         <>
         <Title id='part-1'>Composite em Programação Funcional</Title>

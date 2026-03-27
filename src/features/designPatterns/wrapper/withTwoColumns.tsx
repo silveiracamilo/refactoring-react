@@ -1,17 +1,22 @@
 import { Col, Row } from "antd";
-import type { JSX } from "react";
+import type { ReactNode } from "react";
 
-const withTwoColumns = (leftContent: JSX.Element, rightContent: JSX.Element) => {
+type TwoColumnsProps = {
+    left: ReactNode
+    right: ReactNode
+}
+
+const TwoColumns = ({ left, right }: TwoColumnsProps) => {
     return (
         <Row>
             <Col lg={24} xl={18}>
-                {leftContent}
+                {left}
             </Col>
             <Col lg={0} xl={6}>
-                {rightContent}
+                {right}
             </Col>
         </Row>
     );
 }
 
-export default withTwoColumns;
+export default TwoColumns;

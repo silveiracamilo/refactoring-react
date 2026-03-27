@@ -1,13 +1,18 @@
-import type { JSX } from "react";
+import type { ReactNode } from "react";
 import { Col, Row, Timeline, Typography } from "antd";
 import type { IProsCons } from "../builder/prosConsBuilder";
 
 const { Title } = Typography;
 
-const withProsCons = (content: JSX.Element, prosCons: IProsCons) => {
+type ProsConsSectionProps = {
+    prosCons: IProsCons
+    children: ReactNode
+}
+
+const ProsConsSection = ({ children, prosCons }: ProsConsSectionProps) => {
     return (
         <>
-        {content}
+        {children}
         <Title level={4} className='mb-6 mt-6' id='part-6'>
             Prós e contras
         </Title>
@@ -23,4 +28,4 @@ const withProsCons = (content: JSX.Element, prosCons: IProsCons) => {
     );
 }
 
-export default withProsCons;
+export default ProsConsSection;

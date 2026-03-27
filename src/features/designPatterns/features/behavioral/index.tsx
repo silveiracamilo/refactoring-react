@@ -1,7 +1,6 @@
-import React from "react";
 import Behavioral from "./Behavioral";
 
-export const BehavioralPage: React.FC = () => {
+export const BehavioralPage = () => {
     return (
         <Behavioral />
     );

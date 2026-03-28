@@ -1,0 +1,14 @@
+/* TEAM */
+Organization: Silveira Tech
+Site: https://refactoring-react.silveiracamilo.com.br/
+
+/* PROJECT */
+Name: Refactoring React
+Description: Plataforma de aprendizado sobre Design Patterns, SOLID e boas praticas com React + TypeScript.
+Stack: React, TypeScript, Vite, Ant Design
+
+/* CONTACT */
+LinkedIn: https://www.linkedin.com
+
+/* THANKS */
+A toda comunidade open source e aos autores das referencias usadas no projeto.

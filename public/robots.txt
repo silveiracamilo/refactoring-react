@@ -1,1 +1,28 @@
+# Silvertech Design Patterns Learning Platform
+# SEO Configuration
+
 User-agent: *
+Allow: /
+Allow: /design-patterns
+Allow: /design-patterns/creational
+Allow: /design-patterns/creational/*
+Allow: /design-patterns/structural
+Allow: /design-patterns/structural/*
+Allow: /design-patterns/behavioral
+Allow: /design-patterns/behavioral/*
+
+# Disallow pages that are not meant to be indexed
+Disallow: /noMatch
+Disallow: /*?*
+
+# Crawl delay for search engines (in seconds)
+Crawl-delay: 1
+
+# Request rate
+Request-rate: 30/1m
+
+# Sitemap location
+Sitemap: https://refactoring-react.silveiracamilo.com.br/sitemap.xml
+
+# Domain prefer
+Prefer-http: false

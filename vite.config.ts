@@ -22,40 +22,12 @@ export default defineConfig({
       output: {
         entryFileNames: "[name].[hash].js",
         chunkFileNames: "[name].[hash].js",
-        manualChunks: (id) => {
-          if (!id.includes("node_modules")) {
-            return undefined;
-          }
-
-          if (id.includes("antd") || id.includes("@ant-design") || id.includes("rc-")) {
-            return "antd-vendor";
-          }
-
-          if (id.includes("@tanstack/react-query")) {
-            return "query-vendor";
-          }
-
-          if (id.includes("react-intl") || id.includes("@formatjs")) {
-            return "intl-vendor";
-          }
-
-          if (
-            id.includes("/node_modules/react/") ||
-            id.includes("/node_modules/react-dom/") ||
-            id.includes("/node_modules/scheduler/")
-          ) {
-            return "react-vendor";
-          }
-
-          if (id.includes("jspdf") || id.includes("html2canvas") || id.includes("dompurify")) {
-            return "pdf-vendor";
-          }
-
-          if (id.includes("highlight.js")) {
-            return "highlight-vendor";
-          }
-
-          return "vendor";
+        manualChunks: {
+          "react-vendor": ["react", "react-dom", "scheduler"],
+          "antd-vendor": ["antd", "@ant-design/icons"],
+          "query-vendor": ["@tanstack/react-query"],
+          "pdf-vendor": ["jspdf", "html2canvas", "dompurify"],
+          "highlight-vendor": ["highlight.js"],
         },
       },
     },

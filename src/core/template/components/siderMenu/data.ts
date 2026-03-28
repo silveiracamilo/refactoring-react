@@ -22,6 +22,17 @@ export const siderMenuItems: SiderMenuItemType[] = [
             { label: 'Flyweight', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FLYWEIGHT },
             { label: 'Proxy', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_PROXY },
         ] },
-        { label: 'Behavioral', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL },
+        { label: 'Behavioral', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL, children: [
+            { label: 'Chain of Responsibility', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_CHAIN_OF_RESPONSIBILITY },
+            { label: 'Command', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_COMMAND },
+            { label: 'Iterator', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_ITERATOR },
+            { label: 'Mediator', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_MEDIATOR },
+            { label: 'Memento', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_MEMENTO },
+            { label: 'Observer', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_OBSERVER },
+            { label: 'State', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_STATE },
+            { label: 'Strategy', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_STRATEGY },
+            { label: 'Template Method', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_TEMPLATE_METHOD },
+            { label: 'Visitor', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_VISITOR },
+        ] },
     ] },
 ];

@@ -19,6 +19,16 @@ import { DecoratorPage } from "@/features/designPatterns/features/structural/fea
 import { FacadePage } from "@/features/designPatterns/features/structural/features/facade/loadable";
 import { FlyweightPage } from "@/features/designPatterns/features/structural/features/flyweight/loadable";
 import { ProxyPage } from "@/features/designPatterns/features/structural/features/proxy/loadable";
+import { ChainOfResponsibilityPage } from "@/features/designPatterns/features/behavioral/features/chainOfResponsibility/loadable";
+import { CommandPage } from "@/features/designPatterns/features/behavioral/features/command/loadable";
+import { IteratorPage } from "@/features/designPatterns/features/behavioral/features/iterator/loadable";
+import { MediatorPage } from "@/features/designPatterns/features/behavioral/features/mediator/loadable";
+import { MementoPage } from "@/features/designPatterns/features/behavioral/features/memento/loadable";
+import { ObserverPage } from "@/features/designPatterns/features/behavioral/features/observer/loadable";
+import { StatePage } from "@/features/designPatterns/features/behavioral/features/state/loadable";
+import { StrategyPage } from "@/features/designPatterns/features/behavioral/features/strategy/loadable";
+import { TemplateMethodPage } from "@/features/designPatterns/features/behavioral/features/templateMethod/loadable";
+import { VisitorPage } from "@/features/designPatterns/features/behavioral/features/visitor/loadable";
 
 const Router = () => {
     return (
@@ -42,6 +52,16 @@ const Router = () => {
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FLYWEIGHT} element={<FlyweightPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_PROXY} element={<ProxyPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_CHAIN_OF_RESPONSIBILITY} element={<ChainOfResponsibilityPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_COMMAND} element={<CommandPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_ITERATOR} element={<IteratorPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_MEDIATOR} element={<MediatorPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_MEMENTO} element={<MementoPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_OBSERVER} element={<ObserverPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_STATE} element={<StatePage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_STRATEGY} element={<StrategyPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_TEMPLATE_METHOD} element={<TemplateMethodPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL_VISITOR} element={<VisitorPage />} />
                     <Route path="*" element={<NoMatchPage />} />
                 </Route>
             </Routes>

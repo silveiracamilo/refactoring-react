@@ -16,6 +16,16 @@ enum RouterPaths {
     DESIGN_PATTERNS_STRUCTURAL_FLYWEIGHT = '/design-patterns/structural/flyweight',
     DESIGN_PATTERNS_STRUCTURAL_PROXY = '/design-patterns/structural/proxy',
     DESIGN_PATTERNS_BEHAVIORAL = '/design-patterns/behavioral',
+    DESIGN_PATTERNS_BEHAVIORAL_CHAIN_OF_RESPONSIBILITY = '/design-patterns/behavioral/chain-of-responsibility',
+    DESIGN_PATTERNS_BEHAVIORAL_COMMAND = '/design-patterns/behavioral/command',
+    DESIGN_PATTERNS_BEHAVIORAL_ITERATOR = '/design-patterns/behavioral/iterator',
+    DESIGN_PATTERNS_BEHAVIORAL_MEDIATOR = '/design-patterns/behavioral/mediator',
+    DESIGN_PATTERNS_BEHAVIORAL_MEMENTO = '/design-patterns/behavioral/memento',
+    DESIGN_PATTERNS_BEHAVIORAL_OBSERVER = '/design-patterns/behavioral/observer',
+    DESIGN_PATTERNS_BEHAVIORAL_STATE = '/design-patterns/behavioral/state',
+    DESIGN_PATTERNS_BEHAVIORAL_STRATEGY = '/design-patterns/behavioral/strategy',
+    DESIGN_PATTERNS_BEHAVIORAL_TEMPLATE_METHOD = '/design-patterns/behavioral/template-method',
+    DESIGN_PATTERNS_BEHAVIORAL_VISITOR = '/design-patterns/behavioral/visitor',
 }
 
 export default RouterPaths;

@@ -14,6 +14,7 @@ enum RouterPaths {
     DESIGN_PATTERNS_STRUCTURAL_DECORATOR = '/design-patterns/structural/decorator',
     DESIGN_PATTERNS_STRUCTURAL_FACADE = '/design-patterns/structural/facade',
     DESIGN_PATTERNS_STRUCTURAL_FLYWEIGHT = '/design-patterns/structural/flyweight',
+    DESIGN_PATTERNS_STRUCTURAL_PROXY = '/design-patterns/structural/proxy',
     DESIGN_PATTERNS_BEHAVIORAL = '/design-patterns/behavioral',
 }
 

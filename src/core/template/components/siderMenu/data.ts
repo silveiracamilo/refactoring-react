@@ -20,6 +20,7 @@ export const siderMenuItems: SiderMenuItemType[] = [
             { label: 'Decorator', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_DECORATOR },
             { label: 'Facade', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FACADE },
             { label: 'Flyweight', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FLYWEIGHT },
+            { label: 'Proxy', key: RouterPaths.DESIGN_PATTERNS_STRUCTURAL_PROXY },
         ] },
         { label: 'Behavioral', key: RouterPaths.DESIGN_PATTERNS_BEHAVIORAL },
     ] },

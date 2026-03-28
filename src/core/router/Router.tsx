@@ -18,6 +18,7 @@ import { CompositePage } from "@/features/designPatterns/features/structural/fea
 import { DecoratorPage } from "@/features/designPatterns/features/structural/features/decorator/loadable";
 import { FacadePage } from "@/features/designPatterns/features/structural/features/facade/loadable";
 import { FlyweightPage } from "@/features/designPatterns/features/structural/features/flyweight/loadable";
+import { ProxyPage } from "@/features/designPatterns/features/structural/features/proxy/loadable";
 
 const Router = () => {
     return (
@@ -39,6 +40,7 @@ const Router = () => {
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_DECORATOR} element={<DecoratorPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FACADE} element={<FacadePage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_FLYWEIGHT} element={<FlyweightPage />} />
+                    <Route path={RouterPaths.DESIGN_PATTERNS_STRUCTURAL_PROXY} element={<ProxyPage />} />
                     <Route path={RouterPaths.DESIGN_PATTERNS_BEHAVIORAL} element={<BehavioralPage />} />
                     <Route path="*" element={<NoMatchPage />} />
                 </Route>

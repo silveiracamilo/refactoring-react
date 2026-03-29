@@ -60,4 +60,4 @@
 - [x] 8.1 Run: `npm run build` and verify no errors
 - [x] 8.2 Check built bundle for AdBanner component code
 - [x] 8.3 Verify ad scripts load in production build
-- [ ] 8.4 Create git commit with all changes
+- [x] 8.4 Create git commit with all changes
